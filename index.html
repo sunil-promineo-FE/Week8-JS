@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+  <div class="box">
+  <h1>Task Manager</h1>    
+  <h2>Add Task</h2>
+  <div>
+    <input type="text" id="taskNameInput" placeholder="Task Name">
+    <input type="text" id="taskDetailsInput" placeholder="Task Details">
+    <input type="text" id="estimatedDurationInput" placeholder="Estimated Duration">
+    <input type="text" id="assignedToInput" placeholder="Assigned To">
+    <button id="addTaskButton">Add Task</button>
+  </div>
+
+  <!-- Person Input Form -->
+  <h2>Add Person</h2>
+  <div>
+    <input type="text" id="personNameInput" placeholder="Name">
+    <input type="text" id="personAgeInput" placeholder="Age">
+    <input type="text" id="personCellInput" placeholder="Cell#">
+    <input type="text" id="personAddressInput" placeholder="Address">
+    <button id="addPersonButton">Add Person</button>
+  </div>
+  <br>
+  <br>
+  <br>
+</div>
+
+<div class="box2">
+  <!-- Tasks Table -->
+  <h2>Tasks</h2>
+  <table>
+    <thead>
+      <tr>
+        <th onclick="sortTasks('taskName')">Task Name</th>
+        <th onclick="sortTasks('taskDetails')">Task Details</th>
+        <th onclick="sortTasks('estimatedDuration')">Estimated Duration</th>
+        <th>Assigned To</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="taskTableBody">
+      <!-- Tasks will be added here -->
+    </tbody>
+  </table>
+
+  <!-- Persons Table -->
+  <h2>Persons</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Cell#</th>
+        <th>Address</th>
+        <th>Assigned Tasks</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="personTableBody">
+      <!-- Persons will be added here -->
+    </tbody>
+  </table>
+</div>
+  <script src="script.js"></script>
+</body>
+</html>
